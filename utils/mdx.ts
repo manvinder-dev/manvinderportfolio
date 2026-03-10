@@ -36,6 +36,7 @@ const slugify = (name: string) =>
         .replace(/-+/g, '-');        // collapse duplicate hyphens
 
 const getMdxFiles = (dir: string) => {
+    if (!fs.existsSync(dir)) return [];
     return fs.readdirSync(dir).filter((file) => path.extname(file) === '.mdx');
 };
 
