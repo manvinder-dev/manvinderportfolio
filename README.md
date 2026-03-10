@@ -29,8 +29,31 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy on Amazon Amplify
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is configured for deployment on [AWS Amplify](https://aws.amazon.com/amplify/) with SSR support.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Prerequisites
+- AWS account
+- Repository pushed to GitHub, GitLab, or Bitbucket
+
+### Steps
+
+1. Open the [AWS Amplify Console](https://console.aws.amazon.com/amplify/)
+2. Click **Host web app** → connect your Git repository
+3. Amplify will auto-detect the `amplify.yml` build spec and the Next.js framework
+4. Click **Next** through the review screens and then **Save and deploy**
+
+### Environment Variables
+
+If you move the Web3Forms access key to an environment variable (see `.env.example`), add it in the Amplify Console:
+
+> **App settings → Environment variables → Manage variables**
+
+| Variable | Description |
+|---|---|
+| `NEXT_PUBLIC_WEB3FORMS_KEY` | Your Web3Forms access key (from https://web3forms.com) |
+
+### Build Output
+
+The project uses `output: "standalone"` in `next.config.ts`, which bundles only the necessary files for production — no manual `node_modules` copy needed.
