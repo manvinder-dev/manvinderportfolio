@@ -1,5 +1,6 @@
 import GearCard, { GearItem } from "@/components/GearCard";
-import PhotoGallery from "@/components/PhotoGallery";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export const metadata = {
     title: "Play | Manvinder Rayat",
@@ -8,36 +9,17 @@ export const metadata = {
 
 const gear: GearItem[] = [
     {
-        name: "Fujifilm X100V",
-        model: "X100V",
-        note: "My everyday carry. The film simulations give me exactly what I want straight out of camera.",
-        imageUrl: "https://picsum.photos/seed/camera1/400/400"
+        name: "Canon EOS Rebel T7",
+        imageUrl: "/gear/canon-rebel-t7.png"
     },
     {
-        name: "Sony Alpha a7IV",
-        model: "ILCE-7M4",
-        note: "For planned shoots and when I need reliable autofocus and higher resolution. A dependable workhorse.",
-        imageUrl: "https://picsum.photos/seed/camera2/400/400"
+        name: "Canon EF 75-300mm Lens",
+        imageUrl: "/gear/canon-75-300.png"
     },
     {
-        name: "Canon AE-1",
-        model: "35mm SLR",
-        note: "For slowing down and being intentional with every frame. Processing film is my kind of meditation.",
-        imageUrl: "https://picsum.photos/seed/camera3/400/400"
+        name: "DJI Neo",
+        imageUrl: "/gear/dji-neo.png"
     }
-];
-
-const mockPhotos = [
-    { id: "1", url: "icon.png", label: "From Pune", rotation: -1.5 },
-    { id: "2", url: "https://picsum.photos/seed/photo2/800/1000", rotation: 1 },
-    { id: "3", url: "https://picsum.photos/seed/photo3/800/1000", label: "To San Francisco", rotation: 2 },
-    { id: "4", url: "https://picsum.photos/seed/photo4/800/1000", rotation: -2 },
-    { id: "5", url: "https://picsum.photos/seed/photo5/800/1000", rotation: 1.5 },
-    { id: "6", url: "https://picsum.photos/seed/photo6/800/1000", label: "Early Mornings", rotation: -1 },
-    { id: "7", url: "https://picsum.photos/seed/photo6/800/1000", label: "Early Mornings", rotation: -1 },
-    { id: "8", url: "https://picsum.photos/seed/photo6/800/1000", label: "Early Mornings", rotation: -1 },
-    { id: "9", url: "https://picsum.photos/seed/photo6/800/1000", label: "Early Mornings", rotation: -1 },
-    { id: "10", url: "icon.png", label: "From Pune", rotation: -1.5 }
 ];
 
 export default function PlayPage() {
@@ -50,12 +32,12 @@ export default function PlayPage() {
                     Beyond{" "}
                     <span className="text-script text-accent">Screens</span>
                 </h1>
-                <p className="text-script text-accent text-xl mt-1">(maybe not so much!)</p>
+                <p className="text-script text-accent text-lg mt-1">(maybe not so much!)</p>
             </section>
 
             {/* Camera Gear Section */}
             <section className="space-y-8">
-                <h2 className="text-2xl font-medium text-foreground">What I shoot with</h2>
+                <h2 className="text-2xl text-section text-foreground">Tools of <span className="text-script text-accent">Creation</span></h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {gear.map((item, idx) => (
                         <GearCard key={idx} item={item} />
@@ -63,10 +45,21 @@ export default function PlayPage() {
                 </div>
             </section>
 
-            {/* Photo Gallery */}
-            <section className="space-y-8 pb-12">
-                <h2 className="text-2xl font-medium text-foreground">Gallery</h2>
-                <PhotoGallery photos={mockPhotos} />
+            {/* Photo Gallery Link */}
+            <section className="pb-12 flex flex-col md:flex-row items-center justify-between gap-8 pt-6">
+                <div className="text-center md:text-left space-y-2">
+                    <h2 className="text-2xl md:text-3xl font-medium text-foreground">Some Playing <span className="text-script text-accent">Around</span></h2>
+                    <p className="text-[#888888] text-lg max-w-md mx-auto md:mx-0">
+                        A collection of moments captured through my lenses.
+                    </p>
+                </div>
+                <Link
+                    href="/play/gallery"
+                    className="group inline-flex items-center gap-2 bg-accent text-white hover:bg-accent/90 px-8 py-4 rounded-full font-medium transition-all shadow-md shrink-0"
+                >
+                    View Gallery
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
             </section>
 
         </div>
