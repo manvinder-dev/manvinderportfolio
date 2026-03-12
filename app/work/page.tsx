@@ -8,64 +8,63 @@ export const metadata = {
 
 const timeline = [
     {
-        company: "Acme Design Co.",
-        role: "Senior Product Designer",
-        date: "2022 - Present",
+        company: "Kwantlen Polytechnic University",
+        role: "System Support Technologist (CO-OP)",
+        date: "December, 2024 - Present",
         bullets: [
-            "Led the redesign of the core dashboard, improving user retention by 24%.",
-            "Established and maintained the global design system.",
-            "Mentored junior designers and facilitated cross-functional workshops."
+            "Provide technical support and systems administration within KPU's IT department",
+            "Troubleshoot hardware, software, and network issues for staff and students.",
+            "Collaborate with IT teams to maintain and improve university infrastructure."
         ]
     },
     {
-        company: "StartUp Inc.",
-        role: "Product Designer",
-        date: "2019 - 2022",
+        company: "Kwantlen Polytechnic University",
+        role: "I.T. Peer Tutor",
+        date: "September, 2023 - Present",
         bullets: [
-            "Designed the end-to-end mobile application from 0 to 1.",
-            "Conducted foundational user research to validate product-market fit.",
-            "Collaborated closely with engineering to ensure pixel-perfect implementation."
+            "Facilitate student comprehension of core course concepts and assignment structuring.",
+            "Offer constructive feedback and guide students toward academic improvement.",
+            "Connect students with support resources and promote Learning Centre programs."
         ]
     },
     {
-        company: "Creative Agency",
-        role: "UX/UI Designer",
-        date: "2017 - 2019",
+        company: "Lenmark Industries",
+        role: "Jr. Developer & QA Analyst",
+        date: "September, 2023 – February, 2024",
         bullets: [
-            "Delivered high-converting landing pages for diverse B2B clients.",
-            "Prototyped interactive experiences using advanced Framer techniques."
-        ]
-    },
-    {
-        company: "Creative Agency",
-        role: "UX/UI Designer",
-        date: "2017 - 2019",
-        bullets: [
-            "Delivered high-converting landing pages for diverse B2B clients.",
-            "Prototyped interactive experiences using advanced Framer techniques."
+            "Built and maintained test plans, test cases, and scripts using Selenium and AI tools.",
+            "Documented and prioritized software defects, coordinating with dev teams for resolution.",
+            "Contributed to requirement analysis, design reviews, and ongoing QA process improvements."
         ]
     }
 ];
 
 const timelineVolunteer = [
     {
-        company: "Acme Design Co.",
-        role: "Senior Product Designer",
-        date: "2022 - Present",
+        company: "Kwantlen I.T. Club",
+        role: "President",
+        date: "September, 2022 - Present",
         bullets: [
-            "Led the redesign of the core dashboard, improving user retention by 24%.",
-            "Established and maintained the global design system.",
-            "Mentored junior designers and facilitated cross-functional workshops."
+            "Act as liaison between Kwantlen Student Association and Club Executives.",
+            "Promote on-campus student engagement, networking, and upskilling for KPU IT students."
         ]
     },
     {
-        company: "StartUp Inc.",
-        role: "Product Designer",
+        company: "IEEE KPU Student Branch",
+        role: "Chair",
+        date: "March 2025 - Present",
+        bullets: [
+            "Lead the KPU student branch of IEEE, one of the world's largest technical professional organizations.",
+            "Drive initiatives in science and technology for the student community."
+        ]
+    },
+    {
+        company: "KPU Meville School of Business",
+        role: "Student Representative - Standing Committee on Education Quality",
         date: "2019 - 2022",
         bullets: [
-            "Designed the end-to-end mobile application from 0 to 1.",
-            "Conducted foundational user research to validate product-market fit.",
-            "Collaborated closely with engineering to ensure pixel-perfect implementation."
+            "Represent student interests on KPU Melville School of Business's education quality committee.",
+            "Contribute to institutional decisions around academic standards and student experience."
         ]
     }
 ];
