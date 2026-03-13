@@ -8,16 +8,16 @@ export const metadata = {
 };
 
 const mockPhotos = [
-    { id: "1", url: "/icon.png", label: "From Pune", rotation: -1.5 },
+    { id: "1", url: "/icon.png", label: "Test Image", rotation: -1.5 },
     { id: "2", url: "https://picsum.photos/seed/photo2/800/1000", rotation: 1 },
-    { id: "3", url: "https://picsum.photos/seed/photo3/800/1000", label: "To San Francisco", rotation: 2 },
+    { id: "3", url: "https://picsum.photos/seed/photo3/800/1000", label: "Test Image 2", rotation: 2 },
     { id: "4", url: "https://picsum.photos/seed/photo4/800/1000", rotation: -2 },
     { id: "5", url: "https://picsum.photos/seed/photo5/800/1000", rotation: 1.5 },
-    { id: "6", url: "https://picsum.photos/seed/photo6/800/1000", label: "Early Mornings", rotation: -1 },
-    { id: "7", url: "https://picsum.photos/seed/photo6/800/1000", label: "Early Mornings", rotation: -1 },
-    { id: "8", url: "https://picsum.photos/seed/photo6/800/1000", label: "Early Mornings", rotation: -1 },
-    { id: "9", url: "https://picsum.photos/seed/photo6/800/1000", label: "Early Mornings", rotation: -1 },
-    { id: "10", url: "/icon.png", label: "From Pune", rotation: -1.5 }
+    { id: "6", url: "https://picsum.photos/seed/photo6/800/1000", label: "Test Image 3", rotation: -1 },
+    { id: "7", url: "https://picsum.photos/seed/photo6/800/1000", label: "Test Image 5", rotation: -1 },
+    { id: "8", url: "https://picsum.photos/seed/photo6/800/1000", label: "Test Image 6", rotation: -1 },
+    { id: "9", url: "https://picsum.photos/seed/photo6/800/1000", label: "Test Image 7", rotation: -1 },
+    { id: "10", url: "/icon.png", label: "Test Image 8", rotation: -1.5 }
 ];
 
 export default function GalleryPage() {

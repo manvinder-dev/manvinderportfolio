@@ -54,7 +54,7 @@ export default function AboutPage() {
             {/* Bio Section */}
             <section className="w-full space-y-6 mt-12 text-body text-lg leading-relaxed text-[#4A4A4A] text-left">
                 <p>
-                    Born and brought up in <Link className="underline underline-offset-4" href="https://en.wikipedia.org/wiki/Punjab,_India">Punjab, India</Link>, my early introduction to computers was through <Link className="underline underline-offset-4" href="https://en.wikipedia.org/wiki/Programmable_logic_controller">Programmable Logic Controller (PLC)</Link> operated lathe machines. For an 8-year-old to watch humans control machines through pure logic, shaping my ideology of machines. This mindset followed me to Vancouver, where I'm studying Information Technology @ <Link className="underline underline-offset-4" href="https://kpu.ca">KPU</Link>.
+                    Born and brought up in <Link className="underline underline-offset-4" href="https://en.wikipedia.org/wiki/Punjab,_India">ਪੰਜਾਬ (Panjab, India)</Link>, my early introduction to computers was through <Link className="underline underline-offset-4" href="https://en.wikipedia.org/wiki/Programmable_logic_controller">Programmable Logic Controller (PLC)</Link> operated lathe machines. For an 8-year-old to watch humans control machines through pure logic, shaping my ideology of machines. This mindset followed me to Vancouver, where I'm studying Information Technology @ <Link className="underline underline-offset-4" href="https://kpu.ca">KPU</Link>.
                 </p>
 
                 <p>
