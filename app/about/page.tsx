@@ -52,27 +52,17 @@ export default function AboutPage() {
             </section>
 
             {/* Bio Section */}
-            <section className="max-w-2xl mx-auto space-y-6 mt-12 text-body text-lg leading-relaxed text-[#4A4A4A] text-center">
+            <section className="w-full space-y-6 mt-12 text-body text-lg leading-relaxed text-[#4A4A4A] text-left">
                 <p>
-                    I'm Manvinder, a product designer based between Vancouver and Punjab. I grew up surrounded by vibrant colors and stories, which heavily influences my design philosophy today. I believe the best digital products aren't just usable—they have a pulse.
+                    Born and brought up in <Link className="underline underline-offset-4" href="https://en.wikipedia.org/wiki/Punjab,_India">Punjab, India</Link>, my early introduction to computers was through <Link className="underline underline-offset-4" href="https://en.wikipedia.org/wiki/Programmable_logic_controller">Programmable Logic Controller (PLC)</Link> operated lathe machines. For an 8-year-old to watch humans control machines through pure logic, shaping my ideology of machines. This mindset followed me to Vancouver, where I'm studying Information Technology @ <Link className="underline underline-offset-4" href="https://kpu.ca">KPU</Link>.
                 </p>
 
                 <p>
-                    My journey into design wasn't linear. I started out studying cognitive psychology, endlessly fascinated by how people perceive and interact with the world around them. That curiosity naturally evolved into structuring digital spaces. Now, I use systems thinking and human-centered design to craft products that feel as good as they look.
-                </p>
-
-                <blockquote className="border-l-[3px] border-accent pl-6 py-2 my-8">
-                    <p className="text-script text-accent text-3xl md:text-4xl leading-snug m-0 p-0">
-                        "Design is empathy made visible."
-                    </p>
-                </blockquote>
-
-                <p>
-                    Over the last few years, I've had the privilege of building high-impact tools for enterprise platforms and fast-paced startups. I thrive in the space between blank-page ambiguity and pixel-perfect execution.
+                    Over the past few years, I've been developing my skills to build people-friendly systems, mostly in 0→1 environments. I've worked across a spectrum of institutions - from supporting, developing, and maintaining on-premise and cloud infrastructure at a canadian post-secondary, to developing and testing products at a local startup.
                 </p>
 
                 <p>
-                    Currently, my focus is bridging the gap between utilitarian interfaces and editorial elegance. I want to build software that people actually look forward to opening.
+                    I'm drawn to the gap around usability of AI-developed applications and how to solve communal problems using them. If you're building something ambitious, I'd love to connect!
                 </p>
 
                 <div className="pt-12 flex justify-center">
