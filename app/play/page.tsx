@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata = {
     title: "Play | Manvinder Rayat",
-    description: "Personal photography portfolio.",
+    description: "Life through my lens",
 };
 
 const gear: GearItem[] = [
