@@ -3,7 +3,7 @@ import { Mail, Linkedin, MessageSquare, Rss, FileText, ArrowUpRight } from "luci
 
 export const metadata = {
     title: "Let's Chat | Manvinder Rayat",
-    description: "Get in touch for design work or questions.",
+    description: "Get in touch for any questions or to connect.",
 };
 
 const links = [

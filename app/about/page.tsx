@@ -4,7 +4,7 @@ import PhotoCarousel from "@/components/PhotoCarousel";
 
 export const metadata = {
     title: "About | Manvinder Rayat",
-    description: "Product designer weaving warm digital experiences.",
+    description: "Developer with a passion for creating user-friendly systems.",
 };
 
 export default function AboutPage() {

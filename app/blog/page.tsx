@@ -3,7 +3,7 @@ import BlogGrid from "@/components/BlogGrid";
 
 export const metadata = {
     title: "Blog | Manvinder Rayat",
-    description: "Musings on design, process, and life.",
+    description: "Mind & Matter",
 };
 
 export default function BlogPage() {

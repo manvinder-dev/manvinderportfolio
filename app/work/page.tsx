@@ -3,7 +3,7 @@ import ProjectGrid from "@/components/ProjectGrid";
 
 export const metadata = {
     title: "Work | Manvinder Rayat",
-    description: "A selection of product design and research projects.",
+    description: "Experiences that shaped me",
 };
 
 const timeline = [
