@@ -11,14 +11,6 @@ type Photo = {
     rotation?: number;
 };
 
-// Per-photo bento spans: [mobile classes, desktop classes]
-// 6-photo layout:
-//   Desktop 3-col grid:
-//     [0] 2col×2row (hero)  [1] 1col×1row  [2] 1col×1row
-//     [3] 1col×1row         [4] 1col×1row  [5] 1col×1row
-//   Mobile 2-col grid:
-//     [0] 2col×1row         [1] 1col×1row  [2] 1col×1row
-//     [3] 2col×1row         [4] 1col×1row  [5] 1col×1row
 const SPANS: string[] = [
     "col-span-2 row-span-1 sm:col-span-2 sm:row-span-2",  // hero
     "col-span-1 row-span-1",

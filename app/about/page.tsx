@@ -29,14 +29,14 @@ export default function AboutPage() {
                 {/* Desktop horizontal strip */}
                 <div className="hidden sm:grid grid-cols-4 gap-3">
                     <div className="rounded-2xl overflow-hidden aspect-square relative group">
-                        <img src="/about/Me1.JPG" alt="About"
+                        <img src="/about/Me1.jpg" alt="About"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                             <span className="text-white font-medium text-sm">From Punjab</span>
                         </div>
                     </div>
                     <div className="rounded-2xl overflow-hidden aspect-square relative group">
-                        <img src="/about/Me2.JPG" alt="About"
+                        <img src="/about/Me2.jpg" alt="About"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
                     <div className="rounded-2xl overflow-hidden aspect-square relative group">

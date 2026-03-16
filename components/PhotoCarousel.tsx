@@ -9,10 +9,10 @@ type Photo = {
 };
 
 const photos: Photo[] = [
-    { src: "/shots/IMG_0771 2.JPG", label: "Landscape" },
-    { src: "/shots/IMG_0773.JPG", label: "Cityscape" },
-    { src: "/shots/IMG_0776.JPG", label: "Nature" },
-    { src: "/shots/IMG_0780.JPG", label: "Architecture" },
+    { src: "/shots/IMG_0771 2.jpg", label: "Landscape" },
+    { src: "/shots/IMG_0773.jpg", label: "Cityscape" },
+    { src: "/shots/IMG_0776.jpg", label: "Nature" },
+    { src: "/shots/IMG_0780.jpg", label: "Architecture" },
 ];
 
 export default function PhotoCarousel() {

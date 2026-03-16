@@ -11,10 +11,10 @@ export default function Home() {
 
   const recentBlogs = getBlogPosts().slice(0, 3);
 
-  const defaultImg1 = "/shots/Image11.JPG";
-  const defaultImg2 = "/shots/IMG_0773.JPG";
-  const defaultImg3 = "/shots/IMG_0776.JPG";
-  const defaultImg4 = "/shots/IMG_0780.JPG";
+  const defaultImg1 = "/shots/Image11.jpg";
+  const defaultImg2 = "/shots/IMG_0773.jpg";
+  const defaultImg3 = "/shots/IMG_0776.jpg";
+  const defaultImg4 = "/shots/IMG_0780.jpg";
 
   return (
     <div className="flex flex-col gap-32 pb-20 overflow-hidden">

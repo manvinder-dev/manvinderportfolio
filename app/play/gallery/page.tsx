@@ -11,18 +11,17 @@ export const metadata = {
 
 export default function GalleryPage() {
     const shotsDirectory = path.join(process.cwd(), 'public/shots');
-    let photos: Array<{ id: string; url: string; label: string; rotation: number }> = [];
+    let photos: Array<{ id: string; url: string; label?: string; rotation: number }> = [];
     try {
         const filenames = fs.readdirSync(shotsDirectory);
         photos = filenames
             .filter((file) => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))
             .map((filename, index) => {
                 // Deterministic rotation based on index between -2 and 2
-                const rotation = (index % 5) - 2; 
+                const rotation = (index % 5) - 2;
                 return {
                     id: String(index + 1),
                     url: `/shots/${filename}`,
-                    label: filename.replace(/\.[^/.]+$/, ""),
                     rotation
                 };
             });

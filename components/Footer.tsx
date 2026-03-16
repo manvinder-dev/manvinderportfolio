@@ -23,7 +23,7 @@ export default function Footer() {
                     <a href="https://manvinderr.substack.com" target="_blank" rel="noopener noreferrer" className="text-[#4A4A4A] hover:text-accent transition-colors p-2" aria-label="Substack">
                         <Rss className="w-6 h-6" />
                     </a>
-                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="text-[#4A4A4A] hover:text-accent transition-colors p-2" aria-label="Resume">
+                    <a href="https://drive.google.com/file/d/1r2RC8D_q1dUnX6tE8GRagCpJBiwvrCGf/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-[#4A4A4A] hover:text-accent transition-colors p-2" aria-label="Resume">
                         <FileText className="w-6 h-6" />
                     </a>
                 </div>
