@@ -3,12 +3,16 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const photos = [
-    "https://picsum.photos/seed/about1/800/800",
-    "https://picsum.photos/seed/about2/800/800",
-    "https://picsum.photos/seed/about3/800/800",
-    "https://picsum.photos/seed/about4/800/800",
-    "https://picsum.photos/seed/about5/800/800",
+type Photo = {
+    src: string;
+    label: string;
+};
+
+const photos: Photo[] = [
+    { src: "/shots/IMG_0771 2.JPG", label: "Landscape" },
+    { src: "/shots/IMG_0773.JPG", label: "Cityscape" },
+    { src: "/shots/IMG_0776.JPG", label: "Nature" },
+    { src: "/shots/IMG_0780.JPG", label: "Architecture" },
 ];
 
 export default function PhotoCarousel() {
@@ -31,10 +35,8 @@ export default function PhotoCarousel() {
             {/* Slide */}
             <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
                 <AnimatePresence initial={false} custom={direction} mode="popLayout">
-                    <motion.img
+                    <motion.div
                         key={current}
-                        src={photos[current]}
-                        alt={`Photo ${current + 1}`}
                         custom={direction}
                         variants={variants}
                         initial="enter"
@@ -48,8 +50,17 @@ export default function PhotoCarousel() {
                             if (info.offset.x < -50) paginate(1);
                             else if (info.offset.x > 50) paginate(-1);
                         }}
-                        className="absolute inset-0 w-full h-full object-cover cursor-grab active:cursor-grabbing"
-                    />
+                        className="absolute inset-0 w-full h-full cursor-grab active:cursor-grabbing group"
+                    >
+                        <img
+                            src={photos[current].src}
+                            alt={`Photo ${current + 1}`}
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 pointer-events-none">
+                            <span className="text-white font-medium text-sm">{photos[current].label}</span>
+                        </div>
+                    </motion.div>
                 </AnimatePresence>
             </div>
 

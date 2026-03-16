@@ -1,26 +1,35 @@
 import PhotoGallery from "@/components/PhotoGallery";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import fs from "fs";
+import path from "path";
 
 export const metadata = {
     title: "Gallery | Play | Manvinder Rayat",
     description: "A collection of my photography.",
 };
 
-const mockPhotos = [
-    { id: "1", url: "/icon.png", label: "Test Image", rotation: -1.5 },
-    { id: "2", url: "https://picsum.photos/seed/photo2/800/1000", rotation: 1 },
-    { id: "3", url: "https://picsum.photos/seed/photo3/800/1000", label: "Test Image 2", rotation: 2 },
-    { id: "4", url: "https://picsum.photos/seed/photo4/800/1000", rotation: -2 },
-    { id: "5", url: "https://picsum.photos/seed/photo5/800/1000", rotation: 1.5 },
-    { id: "6", url: "https://picsum.photos/seed/photo6/800/1000", label: "Test Image 3", rotation: -1 },
-    { id: "7", url: "https://picsum.photos/seed/photo6/800/1000", label: "Test Image 5", rotation: -1 },
-    { id: "8", url: "https://picsum.photos/seed/photo6/800/1000", label: "Test Image 6", rotation: -1 },
-    { id: "9", url: "https://picsum.photos/seed/photo6/800/1000", label: "Test Image 7", rotation: -1 },
-    { id: "10", url: "/icon.png", label: "Test Image 8", rotation: -1.5 }
-];
-
 export default function GalleryPage() {
+    const shotsDirectory = path.join(process.cwd(), 'public/shots');
+    let photos: Array<{ id: string; url: string; label: string; rotation: number }> = [];
+    try {
+        const filenames = fs.readdirSync(shotsDirectory);
+        photos = filenames
+            .filter((file) => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))
+            .map((filename, index) => {
+                // Deterministic rotation based on index between -2 and 2
+                const rotation = (index % 5) - 2; 
+                return {
+                    id: String(index + 1),
+                    url: `/shots/${filename}`,
+                    label: filename.replace(/\.[^/.]+$/, ""),
+                    rotation
+                };
+            });
+    } catch (e) {
+        console.error("Failed to read shots directory", e);
+    }
+
     return (
         <div className="flex flex-col gap-16 py-12 animate-in fade-in slide-in-from-bottom-8 duration-700">
             <div className="mb-2">
@@ -36,7 +45,7 @@ export default function GalleryPage() {
             </div>
 
             <section className="pb-12">
-                <PhotoGallery photos={mockPhotos} />
+                <PhotoGallery photos={photos} />
             </section>
         </div>
     );

@@ -19,34 +19,36 @@ export default function AboutPage() {
                 </h1>
             </section>
 
-            {/* Photo section: carousel on mobile, bento on desktop */}
+            {/* Photo section: carousel on mobile, horizontal strip on desktop */}
             <section className="w-full">
                 {/* Mobile carousel */}
                 <div className="sm:hidden">
                     <PhotoCarousel />
                 </div>
 
-                {/* Desktop bento grid */}
+                {/* Desktop horizontal strip */}
                 <div className="hidden sm:grid grid-cols-4 gap-3">
-                    <div className="col-span-2 row-span-2 rounded-2xl overflow-hidden aspect-square">
-                        <img src="https://picsum.photos/seed/about1/800/800" alt="About"
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    <div className="rounded-2xl overflow-hidden aspect-square relative group">
+                        <img src="/about/Me1.JPG" alt="About"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span className="text-white font-medium text-sm">From Punjab</span>
+                        </div>
                     </div>
-                    <div className="rounded-2xl overflow-hidden aspect-square">
-                        <img src="https://picsum.photos/seed/about2/500/500" alt="About"
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    <div className="rounded-2xl overflow-hidden aspect-square relative group">
+                        <img src="/about/Me2.JPG" alt="About"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
-                    <div className="rounded-2xl overflow-hidden aspect-square">
-                        <img src="https://picsum.photos/seed/about3/500/500" alt="About"
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    <div className="rounded-2xl overflow-hidden aspect-square relative group">
+                        <img src="/about/Me3.jpg" alt="About"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
-                    <div className="rounded-2xl overflow-hidden aspect-square">
-                        <img src="https://picsum.photos/seed/about4/500/500" alt="About"
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-                    </div>
-                    <div className="rounded-2xl overflow-hidden aspect-square">
-                        <img src="https://picsum.photos/seed/about5/500/500" alt="About"
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    <div className="rounded-2xl overflow-hidden aspect-square relative group">
+                        <img src="/about/Me4.jpg" alt="About"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span className="text-white font-medium text-sm">To Vancouver</span>
+                        </div>
                     </div>
                 </div>
             </section>

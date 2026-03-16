@@ -11,6 +11,11 @@ export default function Home() {
 
   const recentBlogs = getBlogPosts().slice(0, 3);
 
+  const defaultImg1 = "/shots/Image11.JPG";
+  const defaultImg2 = "/shots/IMG_0773.JPG";
+  const defaultImg3 = "/shots/IMG_0776.JPG";
+  const defaultImg4 = "/shots/IMG_0780.JPG";
+
   return (
     <div className="flex flex-col gap-32 pb-20 overflow-hidden">
 
@@ -88,17 +93,17 @@ export default function Home() {
         <div className="sm:hidden space-y-3">
           {/* Full-width tall photo */}
           <div className="relative h-52 rounded-2xl overflow-hidden group">
-            <img src="https://picsum.photos/seed/photo1/800/600" alt="Photography"
+            <img src={defaultImg1} alt="Photography"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
           {/* 2-col row */}
           <div className="grid grid-cols-2 gap-3">
             <div className="h-36 rounded-2xl overflow-hidden group">
-              <img src="https://picsum.photos/seed/photo2/600/500" alt="Photography"
+              <img src={defaultImg2} alt="Photography"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div className="h-36 rounded-2xl overflow-hidden group">
-              <img src="https://picsum.photos/seed/photo3/600/500" alt="Photography"
+              <img src={defaultImg3} alt="Photography"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
           </div>
@@ -109,7 +114,7 @@ export default function Home() {
               <p className="text-white font-semibold text-xs leading-snug">I'm capturing the world<br />through lens & writing.</p>
             </div>
             <div className="h-28 rounded-2xl overflow-hidden relative group">
-              <img src="https://picsum.photos/seed/photo4/600/500" alt="Photography"
+              <img src={defaultImg4} alt="Photography"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               <Link href="/play"
                 className="absolute bottom-2 left-2 right-2 bg-accent hover:bg-accent/90 text-white text-xs font-semibold py-2 rounded-full text-center transition-all shadow-lg">
@@ -124,19 +129,19 @@ export default function Home() {
 
           {/* Left: tall photo */}
           <div className="row-span-2 rounded-2xl overflow-hidden relative group">
-            <img src="https://picsum.photos/seed/photo1/600/900" alt="Photography"
+            <img src={defaultImg1} alt="Photography"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
 
           {/* Top-middle: landscape photo */}
           <div className="rounded-2xl overflow-hidden relative group">
-            <img src="https://picsum.photos/seed/photo2/800/500" alt="Photography"
+            <img src={defaultImg2} alt="Photography"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
 
           {/* Top-right: portrait photo */}
           <div className="rounded-2xl overflow-hidden relative group">
-            <img src="https://picsum.photos/seed/photo3/600/500" alt="Photography"
+            <img src={defaultImg3} alt="Photography"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
 
@@ -148,7 +153,7 @@ export default function Home() {
 
           {/* Bottom-right: "more" pill card */}
           <div className="rounded-2xl overflow-hidden relative group">
-            <img src="https://picsum.photos/seed/photo4/600/500" alt="Photography"
+            <img src={defaultImg4} alt="Photography"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             <Link href="/play"
               className="absolute bottom-3 left-3 right-3 bg-accent hover:bg-accent/90 text-white text-sm font-semibold py-2.5 rounded-full text-center transition-all shadow-lg">
