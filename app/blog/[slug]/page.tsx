@@ -1,4 +1,5 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import { getBlogPostBySlug, getBlogPosts } from "@/utils/mdx";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -24,13 +25,24 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     }
 
     const mdxComponents = {
+        h1: () => null, // Hide h1 from MDX to avoid duplicate titles
         h2: (props: any) => <h2 className="text-2xl md:text-3xl font-medium mt-16 mb-6 text-foreground tracking-tight" {...props} />,
         h3: (props: any) => <h3 className="text-xl font-medium mt-12 mb-4 text-foreground tracking-tight" {...props} />,
         p: (props: any) => <p className="text-body text-[1.125rem] leading-relaxed mb-6 text-[#333333]" {...props} />,
         ul: (props: any) => <ul className="list-disc pl-6 space-y-2 mb-6 text-body text-[1.125rem] text-[#333333]" {...props} />,
         li: (props: any) => <li {...props} />,
         a: (props: any) => <a className="text-accent font-medium hover:underline underline-offset-4" {...props} />,
-        blockquote: (props: any) => <blockquote className="border-l-4 border-accent pl-6 italic my-8 text-xl text-[#666666]" {...props} />
+        blockquote: (props: any) => <blockquote className="border-l-4 border-accent pl-6 italic my-8 text-xl text-[#666666]" {...props} />,
+        table: (props: any) => (
+            <div className="w-full overflow-x-auto mb-8 rounded-xl border border-divider/40 bg-white/40 shadow-sm">
+                <table className="w-full text-left border-collapse text-body" {...props} />
+            </div>
+        ),
+        thead: (props: any) => <thead className="bg-[#EBEBEB] border-b border-divider/40" {...props} />,
+        th: (props: any) => <th className="px-5 py-4 font-semibold text-foreground text-sm tracking-wide" {...props} />,
+        tbody: (props: any) => <tbody className="divide-y divide-divider/20" {...props} />,
+        tr: (props: any) => <tr className="hover:bg-black/5 transition-colors" {...props} />,
+        td: (props: any) => <td className="px-5 py-4 align-top text-[1rem] text-[#4A4A4A]" {...props} />,
     };
 
     return (
@@ -73,7 +85,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
             {/* Special Drop Cap for the first paragraph of the post */}
             <div className="prose prose-neutral max-w-none first-letter:text-6xl first-letter:font-script first-letter:text-accent first-letter:mr-2 first-letter:float-left first-letter:leading-[0.8]">
-                <MDXRemote source={post.content} components={mdxComponents} />
+                <MDXRemote source={post.content} components={mdxComponents} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
             </div>
 
         </article>

@@ -1,0 +1,41 @@
+---
+title: "Keepr: Secure Cloud Storage Solution"
+date: "2025-03-15"
+tags: ["React", "Tailwind CSS", "AWS Amplify", "AWS Cognito", "AWS AppSync", "AWS S3"]
+description: "A secure, user-authenticated cloud storage web application built with React and AWS Amplify."
+coverImage: "/project/Keepr.png"
+featured: true
+---
+
+# Keepr: Secure Cloud Storage Solution
+
+**Keepr** is a secure, user-authenticated cloud storage web application built with React and powered by AWS Amplify. It enables authenticated users to safely upload, store, categorize, view, and manage their personal files.
+
+## Overview
+
+Designed with privacy and seamless user experience in mind, Keepr leverages AWS cloud infrastructure to offer scalable file management. The frontend features a clean, responsive UI built with Tailwind CSS, offering users the flexibility of toggleable grid and list views. 
+
+## Key Features
+
+* **User Authentication**: Implements secure sign-up and sign-in flows using AWS Cognito User Pools, requiring details like First Name, Last Name, and Email.
+* **Secure File Storage**: Files are hosted securely on AWS S3. Access control is strictly enforced at the owner level via GraphQL schema rules, ensuring users can only access their own data.
+* **Intuitive File Management**: Users can take advantage of a drag-and-drop interface to upload multiple files, view granular details like file size and name, preview files in new tabs, and delete items securely.
+* **Automatic Categorization**: To keep digital spaces tidy, uploaded files are automatically sorted into specific category folders (e.g., `PDF Files`, `JPG Files`) based on their file extensions.
+* **Search and Filter**: Features robust search capabilities that allow users to find files by name or filter down their storage using auto-generated categories.
+
+## Technology Stack
+
+| Category | Technology | Notes |
+| --- | --- | --- |
+| **Frontend** | React | Framework for the user interface. |
+| **Styling** | Tailwind CSS | Used for utility-first styling. |
+| **Cloud/Backend** | AWS Amplify | Provides the development platform, libraries, and CLI integration. |
+| **Authentication** | AWS Cognito | Manages user sign-up and sign-in. |
+| **API/Data** | AWS AppSync (GraphQL) | Manages data (file metadata and folders). |
+| **Storage** | AWS S3 | Stores uploaded user files. |
+
+## Technical Highlights
+
+The application relies heavily on modern React hooks and event listeners to power its interactive features, including real-time drag-and-drop file uploads that track individual file transfer progress natively. On the backend, data isolation is guaranteed through strict `@auth(rules: [{allow: owner}])` directives natively defined in the GraphQL schema for `File` and `Folder` models.
+
+[![GitHub](https://img.shields.io/badge/GitHub-keepr-blue)](https://github.com/manvinder-dev/keepr)
